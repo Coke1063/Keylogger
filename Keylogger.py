@@ -1,7 +1,8 @@
 from pynput.keyboard import Listener
 import logging
 import os
-
+import pyautogui as pt
+import psutil
 
 
 def is_python_running():
