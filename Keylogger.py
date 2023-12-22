@@ -6,8 +6,12 @@ import psutil
 
 
 def is_python_running():
+    process_pid = psutil.Process().pid
+
     for process in psutil.process_iter(['pid', 'name']):
-        if process.info['name'] == 'Python.exe':
+        if process.info['pid'] == process_pid:
+            continue
+        if process.info['name'] == 'pythonw.exe' or process.info['name'] == 'python.exe':
             return True
     return False
 
