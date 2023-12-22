@@ -1,8 +1,7 @@
 from pynput.keyboard import Listener
 import logging
 import os
-import pyautogui as pt
-import psutil
+
 
 
 def is_python_running():
@@ -29,6 +28,7 @@ if is_python_running():
         pass
     else:
         exit()
+
 
 log_dir = os.path.dirname(os.path.abspath(__file__))
 
